@@ -5,6 +5,7 @@ import Link from "next/link";
 
 const Index = (props) => (
   <ul>
+  <h1 className='text-3xl font-bold font-serif'>The blogs</h1>
     {props.posts.map((post) => (
       <li key={post.id}>
         <Link href={`/posts/${post.slug}`}>
@@ -19,8 +20,6 @@ export default Index;
 
 export async function getStaticProps(context) {
   const posts = await getPosts();
-
-  console.log("========",posts,"========")
 
   if (!posts) {
     return {
