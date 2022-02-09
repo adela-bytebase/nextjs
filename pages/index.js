@@ -1,6 +1,6 @@
 // pages/index.js
 
-import { getPosts } from "./lib/functions";
+import { getPosts } from "../lib/functions";
 import Link from "next/link";
 
 const Index = (props) => (
