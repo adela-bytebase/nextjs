@@ -16,10 +16,10 @@ const Home = (props) => (
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="font-bold  text-lg leading-12 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Hey, I'm Adela! 
+            Hey, I&apos;m Adela! 
           </h1>
           <p className="text-sm leading-7 uppercase text-gray-800 dark:text-gray-400">
-          I'm gonna learn and share here. </p>
+           DevRel @Bytebase.com. I&apos;m gonna learn and share here. </p>
         </div>
       </div>
     <main>
