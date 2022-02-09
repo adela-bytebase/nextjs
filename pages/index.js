@@ -10,24 +10,42 @@ const Home = (props) => (
     <Head>
       <title>Adela's Learning Blog</title>
     </Head>
+    <div className="relative pt-6 lg:pt-8 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200">
+    lalalalal
+    </div>
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
+          <h1 className="font-bold  text-lg leading-12 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            Hey, I'm Adela! 
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-hello          </p>
+          <p className="text-sm leading-7 uppercase text-gray-800 dark:text-gray-400">
+          I'm gonna learn and share here. </p>
         </div>
       </div>
     <main>
 
-      <h1 className='text-3xl font-bold font-serif'>The blogs</h1>
+      <h1 className='text-l font-semibold font-sans'>Home / Hey there! Nice to see you here</h1>
       <ul>
         {props.posts.map((post) => (
-          <li key={post.id}>
-            <Link href={`/posts/${post.slug}`}>
-              <a>{post.title}</a>
-            </Link>
+          <li className="max-w-3xl bg-stone-100 overflow-hidden md:max-w-3xl m-10">
+            <div className="md:flex">
+
+            <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+                  {post.tags}aaa
+                </div>
+              <div className="md:shrink-0">
+                 <Image width="300" height="200" className="h-48 w-full object-cover md:h-full md:w-48" src={post.feature_image} />
+              </div>
+              <div className="p-7 overflow-hidden ml-3">
+
+                <Link href={`/posts/${post.slug}`}>
+                 <a className="block text-2xl leading-tight font-bold hover:underline text-gray-900"> {post.title} </a>
+                </Link>
+                <p className="mt-2 text-gray-600 text-sm ">
+                  {post.custom_excerpt}
+                </p>
+              </div>
+            </div>
           </li>
         ))}
       </ul>

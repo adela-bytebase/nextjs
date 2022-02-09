@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  color:#494949;
+}
+
+.bg-card {
+  background-color: #F8F8F8;
+}
+
 /*
 html,
 body {
