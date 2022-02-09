@@ -15,11 +15,11 @@ const Home = (props) => (
     </div>
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="font-bold  text-lg leading-12 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="font-bold  text-4xl leading-12 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Hey, I&apos;m Adela! 
           </h1>
-          <p className="text-sm leading-7 uppercase text-gray-800 dark:text-gray-400">
-           DevRel @Bytebase.com. I&apos;m gonna learn and share here. </p>
+          <p className="text-base leading-7 text-gray-800 dark:text-gray-400">
+          Developer Relations at Bytebase. I&apos;ll learn and share here. </p>
         </div>
       </div>
     <main>
@@ -27,7 +27,7 @@ const Home = (props) => (
       <h1 className='text-l font-semibold font-sans'>Home / Hey there! Nice to see you here</h1>
       <ul>
         {props.posts.map((post) => (
-          <li className="max-w-3xl bg-stone-100 overflow-hidden md:max-w-3xl m-10">
+          <li className="max-w-3xl bg-stone-100 overflow-hidden md:max-w-3xl m-10" key={post.id}>
             <div className="md:flex">
 
             <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
