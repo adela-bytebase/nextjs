@@ -10,8 +10,8 @@ const Home = (props) => (
     <Head>
       <title>Adela&apos;s Learning Blog</title>
     </Head>
-    <div className="relative pt-6 lg:pt-8 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200">
-    lalalalal
+    <div className="uppercase relative pt-6 lg:pt-8 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200">
+    ------------ still under construction ------------
     </div>
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
@@ -29,10 +29,6 @@ const Home = (props) => (
         {props.posts.map((post) => (
           <li className="max-w-3xl bg-stone-100 overflow-hidden md:max-w-3xl m-10" key={post.id}>
             <div className="md:flex">
-
-            <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                  {post.tags}aaa
-                </div>
               <div className="md:shrink-0">
                  <Image width="300" height="200" className="h-48 w-full object-cover md:h-full md:w-48" src={post.feature_image} />
               </div>
@@ -51,9 +47,7 @@ const Home = (props) => (
       </ul>
     </main>
     <footer>
-      this is the footer
-
-      <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+    ------------ still under construction ------------
     </footer>
   </div>
 );
