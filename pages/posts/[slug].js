@@ -5,7 +5,7 @@ import { getSinglePost, getPosts } from "../../lib/functions";
 const PostPage = (props) => {
   return (
     <div>
-      <img src={props.post.feature_image} />
+      <img className="w-24" src={props.post.feature_image} />
       <h1>{props.post.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: props.post.html }} />
     </div>
