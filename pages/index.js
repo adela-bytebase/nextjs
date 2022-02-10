@@ -23,16 +23,16 @@ const Home = (props) => (
             <h1 className="font-semibold  text-base leading-5 tracking-tight text-gray-900 dark:text-gray-100 sm:text-xl sm:leading-10 md:text-3xl md:leading-8">
               Developer Advocate at Bytebase.
             </h1>
-            <div className="mt-4 md:mt-5">
+            <div className="pt-2 md:pt-3">
               <Link href="https://twitter.com/adela_bytebase">
-                <a target="_blank" className="block py-3 px-5 text-sm font-semibold float-left rounded-full bg-blue-600 hover:bg-blue-400 text-white">Twitter</a> 
+                <a target="_blank" className="block py-1 px-2 md:py-3 md:px-5 text-sm font-semibold float-left rounded-full bg-blue-600 hover:bg-blue-400 text-white">Twitter</a> 
               </Link>
               <Link href="https://twitter.com/adela_bytebase">
-                <a target="_blank" className="ml-3 block py-3 px-5 text-sm font-semibold float-left rounded-full bg-gray-800 hover:bg-gray-600 text-white">GitHub</a> 
+                <a target="_blank" className="ml-3 block py-1 px-3 md:ml-5 md:py-3 md:px-5 text-sm font-semibold float-left rounded-full bg-gray-800 hover:bg-gray-600 text-white">GitHub</a> 
               </Link>
             </div> 
           </div>
-          <div className="md:shrink-0 md:-mt-12 border-none">
+          <div className="shrink-1 w-48 md:w-auto md:shrink-0 md:-mt-12 border-none">
             <Image width={320} height={320} src="https://adela-learning-blog-2022-5jx9.onrender.com/content/images/2022/02/adela_white_bg.png"></Image>
           </div>
       </div>
@@ -49,14 +49,14 @@ const Home = (props) => (
               </div>
               <div className="p-ctm"></div>
               <div className="w-full md:shrink-0 md:w-80">
-                 <Image width="600" height="400" className="w-full h-48 object-cover md:h-full md:w-24" src={post.feature_image} />
+                 <Image width="750" height="500" className="w-full h-48 object-cover md:h-full md:w-24" src={post.feature_image} />
               </div>
               <div className="p-5 md:p-6 overflow-hidden md:ml-3">
 
                 <Link href={`/posts/${post.slug}`}>
-                 <a className="block text-2xl md:text-2xl leading-tight font-bold hover:underline text-gray-900"> {post.title} </a>
+                 <a className="block text-2xl md:text-2xl leading-tight font-bold hover:underline text-gray-900 hover:text-blue-600"> {post.title} </a>
                 </Link>
-                <p className="mt-2 text-gray-600 text-sm md:text-sm">
+                <p className="mt-3 text-gray-600 text-sm md:text-sm">
                   {post.custom_excerpt}
                 </p>
               </div>

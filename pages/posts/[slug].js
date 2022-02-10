@@ -5,16 +5,16 @@ import Link from "next/link";
 import formatDate from "../../lib/utils/formatDate";
 
 const PostPage = (props) => {
+
   return (
-
+    
   <div className="container-ctm">
-
         <Link href={`/`}>
-        <a className='text-xs uppercase block p-5 pl-0'>back to <span className="font-semibold">Home</span> </a>
-                </Link>
+          <a className='text-xs uppercase block p-5 pl-0'>back to <span className="font-semibold">Home</span></a>
+        </Link>
     <div>
-      <h1 className="font-bold mb-4  text-5xl leading-12 ">{props.post.title}</h1>
-      <div className="uppercase text-sm text-gray-700 font-semibold pb-2">
+      <h1 className="font-bold mb-8 text-5xl leading-12 ">{props.post.title}</h1>
+      <div className="uppercase text-sm text-gray-700 font-semibold pb-8">
               {props.post.reading_time} min Reading - {formatDate(props.post.published_at)}
        </div>
       <div dangerouslySetInnerHTML={{ __html: props.post.html }} />
