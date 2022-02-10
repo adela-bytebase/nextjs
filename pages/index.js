@@ -49,7 +49,7 @@ const Home = (props) => (
       <div className='text-xs uppercase'>Home / <span className="font-semibold">I&apos;ll learn and share here.</span> </div>
       <ul className="mt-3">
         {props.posts.map((post) => (
-          <li className="max-w-4xl bg-stone-100 overflow-hidden md:max-w-4xl mb-5" key={post.id}>
+          <li className="max-w-4xl bg-zinc-100 overflow-hidden md:max-w-4xl mb-5" key={post.id}>
             <div className="md:flex relative">
               <div className="uppercase text-xs p-5 z-50 -mt-2 absolute left-0 top-0 md:-ml-20 md:-rotate-90 md:w-ctm md:mt-20 text-gray-500">
                 <span className="font-bold text-gray-600">{post.reading_time} min</span> - {formatDate(post.published_at)}
