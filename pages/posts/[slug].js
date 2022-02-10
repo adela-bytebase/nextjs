@@ -9,17 +9,27 @@ const PostPage = (props) => {
   return (
     
   <div className="container-ctm">
+    <main>
         <Link href={`/`}>
           <a className='text-xs uppercase block p-5 pl-0'>back to <span className="font-semibold">Home</span></a>
         </Link>
-    <div>
-      <h1 className="font-bold mb-8 text-5xl leading-12 ">{props.post.title}</h1>
-      <div className="uppercase text-sm text-gray-700 font-semibold pb-8">
-              {props.post.reading_time} min Reading - {formatDate(props.post.published_at)}
-       </div>
-      <div dangerouslySetInnerHTML={{ __html: props.post.html }} />
-      <img className="w-full mt-4" src={props.post.feature_image} />
-    </div>
+      <div>
+        <h1 className="font-bold mb-8 text-5xl leading-12 ">{props.post.title}</h1>
+        <div className="uppercase text-sm text-gray-700 font-semibold pb-8">
+                {props.post.reading_time} min Reading - {formatDate(props.post.published_at)}
+        </div>
+        <div dangerouslySetInnerHTML={{ __html: props.post.html }} />
+        <img className="w-full mt-4" src={props.post.feature_image} />
+      </div>
+    </main>
+
+    <footer className="border-t-2 mt-10">
+      <div className="py-4 px-2">
+        <div className="mt-2 md:mt-0 text-right">
+          <p className="text-sm text-gray-400">&copy; 2022 adela-learning.vecel.app</p>
+        </div>
+      </div>
+    </footer>
   </div>
   );
 };
