@@ -9,8 +9,9 @@
 .p-ctm{
   padding: 1.25rem;
 }
-.ml-ctm{
-  margin-left: -4.6rem;
+
+.md\:-ml-20{
+  margin-left: -4.8rem !important;
 }
 
 .container-ctm{

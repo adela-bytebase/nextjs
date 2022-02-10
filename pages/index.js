@@ -38,7 +38,7 @@ const Home = (props) => (
               </Link>
             </div> 
           </div>
-          <div className="shrink-1 w-48 md:w-auto md:shrink-0 md:-mt-10 border-none">
+          <div className="shrink-1 w-60 md:w-auto md:shrink-0 md:-mt-10 border-none">
             <Image width={320} height={320} src="https://adela-learning-blog-2022-5jx9.onrender.com/content/images/2022/02/adela_white_bg.png"></Image>
           </div>
       </div>
