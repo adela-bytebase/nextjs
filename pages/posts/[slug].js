@@ -1,14 +1,26 @@
 // pages/posts/[slug].js
 
 import { getSinglePost, getPosts } from "../../lib/functions";
+import Link from "next/link";
+import formatDate from "../../lib/utils/formatDate";
 
 const PostPage = (props) => {
   return (
+
+  <div className="container-ctm">
+
+        <Link href={`/`}>
+        <a className='text-xs uppercase block p-5 pl-0'>back to <span className="font-semibold">Home</span> </a>
+                </Link>
     <div>
-      <img className="w-24" src={props.post.feature_image} />
-      <h1>{props.post.title}</h1>
+      <h1 className="font-bold mb-4  text-5xl leading-12 ">{props.post.title}</h1>
+      <div className="uppercase text-sm text-gray-700 font-semibold pb-2">
+              {props.post.reading_time} min Reading - {formatDate(props.post.published_at)}
+       </div>
       <div dangerouslySetInnerHTML={{ __html: props.post.html }} />
+      <img className="w-full mt-4" src={props.post.feature_image} />
     </div>
+  </div>
   );
 };
 

@@ -3,11 +3,21 @@
 @tailwind utilities;
 
 .w-ctm{
-  width:12.5rem;
+  width:0rem;
   text-align: center;
 }
 .p-ctm{
   padding: 1.25rem;
+}
+.ml-ctm{
+  margin-left: -4.6rem;
+}
+
+.container-ctm{
+  @apply p-5;
+  @apply max-w-4xl;
+  @apply mx-auto;
+  @apply font-sans;
 }
 
 /*
