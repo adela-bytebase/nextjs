@@ -15,31 +15,40 @@ const Home = (props) => (
     ------------ still under construction ------------
     </div>
     <div>
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-          <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+      <div className="flex justify-between divide-y divide-gray-200 dark:divide-gray-700">
+          <div className="space-y-2 pt-6 pb-8 mb-4 md:space-y-5 md:flex:1">
             <h1 className="font-bold  text-3xl leading-12 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-5xl md:leading-14">
               Hey, I&apos;m Adela! 
             </h1>
-            <p className="text-base leading-7 text-gray-800 dark:text-gray-400">
-            Developer Relations at Bytebase. I&apos;ll learn and share here. </p>
+            <h1 className="font-semibold  text-2xl leading-7 tracking-tight text-gray-900 dark:text-gray-100 sm:text-xl sm:leading-10 md:text-3xl md:leading-8">
+              Developer Advocate at Bytebase.
+            </h1>
+            <div>
+              <Link href="https://twitter.com/adela_bytebase">
+                <a className="block p-3 text-sm font-semibold float-left rounded-full bg-blue-600 text-white">Twitter</a> 
+              </Link>
+            </div> 
+          </div>
+          <div className="md:shrink-0">
+            <Image width={280} height={280} src="https://adela-learning-blog-2022-5jx9.onrender.com/content/images/2022/02/adela_white_bg.png"></Image>
           </div>
       </div>
     </div>
     <main>
 
-      <h1 className='text-l font-semibold font-sans'>Home / Hey there! Nice to see you here</h1>
-      <ul>
+      <div className='font-sans text-xs uppercase'>Home / <span className="font-semibold">I&apos;ll learn and share here.</span> </div>
+      <ul className="mt-3">
         {props.posts.map((post) => (
-          <li className="max-w-3xl bg-stone-100 overflow-hidden md:max-w-3xl mb-5 mt-2" key={post.id}>
+          <li className="max-w-4xl bg-stone-100 overflow-hidden md:max-w-4xl mb-5" key={post.id}>
             <div className="md:flex relative">
-              <div className="uppercase text-xs p-3 left-0 top-0 -ml-20 z-50 -rotate-90 absolute w-48 mt-20 text-gray-600">
-                {formatDate(post.published_at)}
+              <div className="uppercase text-xs p-4 z-50 absolute left-0 top-0 md:-ml-20 md:-rotate-90 md:w-ctm md:mt-20 text-gray-500">
+                <span className="font-bold text-gray-600">{post.reading_time} min</span> - {formatDate(post.published_at)}
               </div>
-              <div className="p-5"></div>
-              <div className="md:shrink-0">
-                 <Image width="300" height="200" className="h-48 w-full object-cover md:h-full md:w-48" src={post.feature_image} />
+              <div className="p-ctm"></div>
+              <div className="w-full md:shrink-0 md:w-80">
+                 <Image width="600" height="400" className="w-full h-48 object-cover md:h-full md:w-24" src={post.feature_image} />
               </div>
-              <div className="p-7 overflow-hidden ml-3">
+              <div className="p-7 overflow-hidden md:ml-3">
 
                 <Link href={`/posts/${post.slug}`}>
                  <a className="block text-2xl leading-tight font-bold hover:underline text-gray-900"> {post.title} </a>
