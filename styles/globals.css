@@ -32,6 +32,29 @@
   @apply text-blue-600;
 }
 
+.article-section figure.kg-card{
+  @apply mt-10;
+  @apply mb-10;
+}
+
+.article-section h2{
+  @apply text-4xl;
+  @apply font-semibold;
+  @apply leading-loose;
+}
+
+.article-section blockquote{
+  font-style: italic;
+}
+
+.article-section pre{
+  @apply font-mono;
+  @apply bg-gray-100;
+  @apply p-4;
+}
+
+
+
 /*
 html,
 body {

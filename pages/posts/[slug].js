@@ -18,8 +18,9 @@ const PostPage = (props) => {
         <div className="uppercase text-sm text-gray-700 font-semibold pb-8">
                 {props.post.reading_time} min Reading - {formatDate(props.post.published_at)}
         </div>
-        <div className="article-section" dangerouslySetInnerHTML={{ __html: props.post.html }} />
-        <img className="w-full mt-4" src={props.post.feature_image} />
+        <div className="article-section mb-16" dangerouslySetInnerHTML={{ __html: props.post.html }} />
+        <hr />
+        <img className="w-full mt-6" src={props.post.feature_image} />
       </div>
     </main>
 
