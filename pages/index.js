@@ -9,7 +9,7 @@ import Image from 'next/image'
 const Home = (props) => (
   <div className="container-ctm">
     <Head>
-      <title>Adela&apos;s Learning Blog</title>
+      <title>Adela&apos;s Learning Fun</title>
     </Head>
     <div className="uppercase relative pt-6 lg:pt-8 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200">
    
@@ -76,7 +76,7 @@ const Home = (props) => (
     <footer className="border-t-2 mt-10">
       <div className="py-4 px-2">
         <div className="mt-2 md:mt-0 text-right">
-          <p className="text-sm text-gray-400">&copy; 2022 adela-learning.vecel.app</p>
+          <p className="text-sm text-gray-400">&copy; 2022 adela.fun</p>
         </div>
       </div>
     </footer>
