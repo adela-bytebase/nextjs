@@ -58,7 +58,7 @@ const Home = (props) => (
               <div className="w-full md:shrink-0 md:w-80 md:-mb-2">
                  <Image width="750" height="500" className="w-full h-48 object-cover md:h-full md:w-24" src={post.feature_image} />
               </div>
-              <div className="p-5 md:p-6 overflow-hidden md:ml-3">
+              <div className="p-5 md:p-5 md:max-h-44 overflow-hidden md:ml-3">
 
                 <Link href={`/posts/${post.slug}`}>
                  <a className="block text-2xl md:text-2xl leading-tight font-bold hover:underline text-gray-900 hover:text-blue-600"> {post.title} </a>
