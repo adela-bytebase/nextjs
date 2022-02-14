@@ -41,7 +41,6 @@
   @apply text-4xl;
   @apply font-semibold;
   @apply leading-loose;
-  font-size: 1.1rem;
 }
 
 .article-section ul,
