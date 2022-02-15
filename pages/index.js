@@ -46,7 +46,7 @@ const Home = (props) => (
 
 
     <main>
-      <div className='text-xs uppercase'>Home / <span className="font-semibold">I&apos;ll learn and share here. It'll be fun!</span> </div>
+      <div className='text-xs uppercase'>Home / <span className="font-semibold">I&apos;ll learn and share here. It&apos;ll be fun!</span> </div>
       <ul className="mt-3">
         {props.posts.map((post) => (
           <li className="max-w-4xl bg-zinc-100 overflow-hidden md:max-w-4xl mb-5" key={post.id}>
