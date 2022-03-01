@@ -4,7 +4,7 @@ module.exports = {
     domains:[
       'static.ghost.org',
       'images.unsplash.com',
-      'adela-learning-blog-2022-5jx9.onrender.com'
+      'adela-fun-blog-ghost.onrender.com'
     ]
   }
 }
