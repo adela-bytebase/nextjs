@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 .w-ctm{
-  width:0rem;
+  width:13rem;
   text-align: center;
 }
 .p-ctm{
-  padding: 1.25rem;
+  padding: 1.4rem;
 }
 
-.md:-ml-20{
-  margin-left: -4.8rem;
+.text-xs{
+  line-height: 1.8;
 }
 
 .container-ctm{
