@@ -10,6 +10,8 @@ const Home = (props) => (
   <div className="container-ctm">
     <Head>
       <title>Adela&apos;s Learning Fun</title>
+  <script defer data-domain="adela.fun" src="https://plausible.io/js/plausible.js"></script>
+
     </Head>
     <div className="uppercase relative pt-6 lg:pt-8 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200">
    
