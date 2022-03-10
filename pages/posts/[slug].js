@@ -14,7 +14,7 @@ const PostPage = (props) => {
     <meta data-n-head="ssr" 
     data-hid="description"
     name="description"
-    content="{props.post.custom_excerpt}"></meta>
+    content={`${props.post.custom_excerpt}`}></meta>
   </Head>
     <main>
         <Link href={`/`}>
