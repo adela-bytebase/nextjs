@@ -3,12 +3,19 @@
 import { getSinglePost, getPosts } from "../../lib/functions";
 import Link from "next/link";
 import formatDate from "../../lib/utils/formatDate";
+import Head from 'next/head';
 
 const PostPage = (props) => {
 
   return (
-    
   <div className="container-ctm">
+  <Head>
+    <title>{props.post.title}</title>
+    <meta data-n-head="ssr" 
+    data-hid="description"
+    name="description"
+    content="{props.post.custom_excerpt}"></meta>
+  </Head>
     <main>
         <Link href={`/`}>
           <a className='text-xs uppercase block p-5 pl-0'>back to <span className="font-semibold">Home</span></a>
