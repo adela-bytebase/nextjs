@@ -41,15 +41,13 @@ const PostPage = (props) => {
         </Link>
       <div>
 
-      <img className="w-full mt-6" src={props.post.feature_image} />
-      <hr />
+      <img className="w-full mt-6 pb-6" src={props.post.feature_image} />
 
-        <h1 className="font-bold mb-8 text-5xl leading-12 ">{props.post.title}</h1>
+        <h1 className="font-bold mt-8 mb-8 text-5xl leading-12 ">{props.post.title}</h1>
         <div className="uppercase text-sm text-gray-700 font-semibold pb-8">
                 {props.post.reading_time} min Reading - {formatDate(props.post.published_at)}
         </div>
         <div className="article-section mb-16" dangerouslySetInnerHTML={{ __html: props.post.html }} />
-        <hr />
       </div>
     </main>
 

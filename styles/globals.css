@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+hr {
+  @apply pb-5;
+}
+
+.listTitle{
+  line-height: 1.4 !important;
+}
+
 .w-ctm{
   width:13rem;
   text-align: center;
@@ -75,7 +84,6 @@
   @apply border;
   overflow: scroll;
 }
-
 
 
 /*

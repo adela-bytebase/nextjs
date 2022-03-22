@@ -92,7 +92,7 @@ const Home = (props) => (
               <div className="p-5 md:p-5 md:max-h-44 overflow-hidden md:ml-3">
 
                 <Link href={`/posts/${post.slug}`}>
-                 <a className="block text-2xl md:text-2xl leading-tight font-bold hover:underline text-gray-900 hover:text-blue-600"> {post.title} </a>
+                 <a className="listTitle block text-2xl md:text-2xl leading-tight font-bold hover:underline text-gray-900 hover:text-blue-600"> {post.title} </a>
                 </Link>
                 <p className="mt-3 text-gray-600 text-sm md:text-sm">
                   {post.custom_excerpt}
