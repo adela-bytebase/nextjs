@@ -1,6 +1,7 @@
 // pages/posts/[slug].js
 
 import { getSinglePost, getPosts } from "../../lib/functions";
+import { NextSeo } from 'next-seo';
 import Link from "next/link";
 import formatDate from "../../lib/utils/formatDate";
 import Head from 'next/head';
@@ -9,25 +10,46 @@ const PostPage = (props) => {
 
   return (
   <div className="container-ctm">
-  <Head>
-    <title>{props.post.title}</title>
-    <meta data-n-head="ssr" 
-    data-hid="description"
-    name="description"
-    content={`${props.post.custom_excerpt}`}></meta>
-  </Head>
+  <NextSeo
+      title={props.post.title}
+      description={props.post.custom_excerpt}
+      canonical={props.post.canonical}
+      openGraph={{
+        url: props.post.canonical,
+        title: props.post.title,
+        description: props.post.custom_excerpt,
+        images: [
+          {
+            url: props.post.feature_image,
+            width: 800,
+            height: 600,
+            alt: props.post.title,
+            type: 'image/jpeg',
+          }
+        ],
+        site_name: 'adela.fun',
+      }}
+      twitter={{
+        handle: '@adela_bytebase',
+        site: '@adela.fun',
+        cardType: 'summary_large_image',
+      }}
+    />
     <main>
         <Link href={`/`}>
           <a className='text-xs uppercase block p-5 pl-0'>back to <span className="font-semibold">Home</span></a>
         </Link>
       <div>
+
+      <img className="w-full mt-6" src={props.post.feature_image} />
+      <hr />
+
         <h1 className="font-bold mb-8 text-5xl leading-12 ">{props.post.title}</h1>
         <div className="uppercase text-sm text-gray-700 font-semibold pb-8">
                 {props.post.reading_time} min Reading - {formatDate(props.post.published_at)}
         </div>
         <div className="article-section mb-16" dangerouslySetInnerHTML={{ __html: props.post.html }} />
         <hr />
-        <img className="w-full mt-6" src={props.post.feature_image} />
       </div>
     </main>
 

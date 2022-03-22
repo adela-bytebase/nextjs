@@ -2,6 +2,7 @@
 
 import {getPosts} from "../lib/functions";
 import formatDate from "../lib/utils/formatDate";
+import { NextSeo } from 'next-seo';
 import Link from "next/link";
 import Head from 'next/head'
 import Image from 'next/image'
@@ -10,9 +11,37 @@ const Home = (props) => (
   <div className="container-ctm">
     <Head>
       <title>Adela&apos;s Learning Fun</title>
-  <script defer data-domain="adela.fun" src="https://plausible.io/js/plausible.js"></script>
-
+      <script defer data-domain="adela.fun" 
+        src="https://plausible.io/js/plausible.js">
+      </script>
     </Head>
+
+    <NextSeo
+      title="Adela's Learning Blog"
+      description="Bytebase's Developer Advocate"
+      canonical="adela.fun"
+      openGraph={{
+        url: "adela.fun",
+        title: "Adela's Learning Blog",
+        description:"Bytebase's Developer Advocate",
+        images: [
+          {
+            url: "/adela_white_bg.png",
+            width: 800,
+            height: 600,
+            alt: "Adela's Learning Blog",
+            type: 'image/jpeg',
+          }
+        ],
+        site_name: 'adela.fun',
+      }}
+      twitter={{
+        handle: '@adela_bytebase',
+        site: '@adela.fun',
+        cardType: 'summary_large_image',
+      }}
+    />
+
     <div className="uppercase relative pt-6 lg:pt-8 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200">
    
     </div>
